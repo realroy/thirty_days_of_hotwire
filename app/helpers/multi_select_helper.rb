@@ -1,0 +1,2 @@
+module MultiSelectHelper
+end

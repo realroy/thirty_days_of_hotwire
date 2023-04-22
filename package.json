@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "vite": "^4.3.1",
+    "vite-plugin-ruby": "^3.2.1"
+  },
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "vite-plugin-stimulus-hmr": "^3.0.0"
+  }
+}
