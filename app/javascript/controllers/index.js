@@ -1,10 +1,13 @@
 // Import and register all your controllers from the importmap under controllers/*
-import { registerControllers } from 'stimulus-vite-helpers'
+import { registerControllers } from "stimulus-vite-helpers";
 
-import { application } from "./application"
+import { application } from "./application";
 
-export const controllers = import.meta.globEager('../**/*_controller.js')
-registerControllers(application, controllers)
+export const controllers = import.meta.glob(
+  ["../**/*_controller.js", "../../views/components/**/*_controller.js"],
+  { eager: true }
+);
+registerControllers(application, controllers);
 
 // Eager load all controllers defined in the import map under controllers/**/*_controller
 // import { eagerLoadControllersFrom } from "@hotwired/stimulus-loading"

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :multi_select, only: [:index]
+  resources :multi_select, only: %i[index] do
+    post :select_technologies, on: :collection
+  end
 
 end
