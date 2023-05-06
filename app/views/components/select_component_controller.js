@@ -37,7 +37,6 @@ export default class extends Controller {
 
   handleClickDropdownItem = (e) => {
     e.stopPropagation();
-    // const id = e.currentTarget.id;
     const chip = this.chipTemplateTarget.content.cloneNode(true);
     chip.querySelector("span > span").innerText = e.currentTarget.innerText;
     chip
@@ -45,7 +44,6 @@ export default class extends Controller {
       .setAttribute("data-value", e.currentTarget.dataset.value);
     this.chipsTarget.appendChild(chip);
     e.currentTarget.classList.add("hidden");
-    // console.log(e.currentTarget.innerText);
     this.toggleDropdown(e);
   };
 
@@ -55,7 +53,6 @@ export default class extends Controller {
     const target = this.dropdownItemTargets.find(
       (item) => item.dataset.value === chip.dataset.value
     );
-    console.log(this.dropdownItemTargets[0].dataset, chip.dataset);
     target.classList.remove("hidden");
   };
 }

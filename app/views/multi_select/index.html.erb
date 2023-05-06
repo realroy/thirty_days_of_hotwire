@@ -2,6 +2,3 @@
   <h1 class="text-4xl text-slate-800">Multi Select</h1>
   <%= render SelectComponent.new(options: @technologies.map {|t| [t.name, t.id]}, text_field_name: :technology_ids) %>
 </main>
-<div id="select-technologies">
-  Loading
-</div>
