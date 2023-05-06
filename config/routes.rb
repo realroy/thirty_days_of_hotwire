@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :multi_select, only: %i[index] do
     post :select_technologies, on: :collection
   end
+  resources :realtime_online_users, only: %i[index]
 
-  root "home#index"
+  root 'home#index'
 end
